@@ -1,11 +1,12 @@
-import "./App.css";
-import React, { useState } from "react";
-import Navbar from "./components/Navbar/index";
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Wrapper from "./components/Wrapper/index";
 import Footer from "./components/Footer/index";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import Resume from "./components/Resume";
+import About from "./routes/About";
+import Portfolio from "./routes/Portfolio";
+import Contact from "./routes/Contact";
+import Resume from "./routes/Resumedownload";
 
 function App() {
     return (
@@ -18,7 +19,7 @@ function App() {
             <Route exact path="/portfolio" component={Portfolio} />
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/contact" component={Contact} />
-          </Wrapper>
+            </Wrapper>
           <Footer />
         </div>
       </HashRouter>
